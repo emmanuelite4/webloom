@@ -4,45 +4,7 @@ import Logo from "../../assets/images/logo.svg";
 import { Text28 } from "../shared/Text/Text";
 import SideBarListItem from "./SideBarListItem";
 import Button from "../shared/Button/Button";
-
-type MenuType = {
-  title: string;
-  path: string;
-  icon: string;
-};
-
-const menus: MenuType[] = [
-  {
-    title: "Dashboard",
-    path: "dashboard",
-    icon: "dashboard",
-  },
-  {
-    title: "My Team",
-    path: "my-team",
-    icon: "team",
-  },
-  {
-    title: "Task",
-    path: "task",
-    icon: "task",
-  },
-  {
-    title: "Calender",
-    path: "calender",
-    icon: "calender",
-  },
-  {
-    title: "Report",
-    path: "report",
-    icon: "report",
-  },
-  {
-    title: "Settings",
-    path: "settings",
-    icon: "settings",
-  },
-];
+import { menus } from "../../constants/side-menu";
 
 function SideBar() {
   return (
@@ -53,7 +15,12 @@ function SideBar() {
       </HeaderSection>
       <BodySection>
         {menus.map((menu) => (
-          <SideBarListItem title={menu.title} icon={menu.icon} />
+          <SideBarListItem
+            key={menu.path}
+            title={menu.title}
+            icon={menu.icon}
+            path={menu.path}
+          />
         ))}
       </BodySection>
       <Button icon={<span className="icon-logout" />}>Logout</Button>
