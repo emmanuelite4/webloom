@@ -5,9 +5,14 @@ import styled from "@emotion/styled";
 export const Text28 = styled.h1`
   font-size: 22px;
   color: ${COLOR_TEXT_PRIMARY};
+  margin: 0;
+  padding: 0;
 `;
 
 export const Text18 = styled.h3`
   font-size: 18px;
   color: ${(props) => props.color || COLOR_TEXT_PRIMARY};
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
 `;
