@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Skote_React_v2.3.0/Admin-Redux/.idea/Admin-Redux.iml" filepath="$PROJECT_DIR$/../../Skote_React_v2.3.0/Admin-Redux/.idea/Admin-Redux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/only1.iml" filepath="$PROJECT_DIR$/.idea/only1.iml" />
+    </modules>
+  </component>
+</project>
