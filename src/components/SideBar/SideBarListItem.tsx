@@ -12,7 +12,7 @@ type Props = {
 
 const SideBarListItem: FC<Props> = ({ title, icon, path }) => {
   const location = useLocation();
-  const active: boolean = location.pathname === `/${path}`;
+  const active: boolean = location.pathname === path;
   const color = active ? COLOR_PRIMARY_ONE : "";
   return (
     <Holder active={active} to={path}>
