@@ -18,18 +18,16 @@ const StatsCard: FC<Props> = (props) => {
   const percentageString = `${percentage}%`;
 
   const options = {
+    chart: { sparkline: { enabled: !0 } },
+    dataLabels: { enabled: !1 },
     plotOptions: {
       radialBar: {
-        startAngle: -180,
-        endAngle: 180,
         background: COLOR_PRIMARY_ONE,
         hollow: {
-          size: percentageString,
+          size: "80%",
+          margin: 0,
         },
-        track: {
-          startAngle: -180,
-          endAngle: 0,
-        },
+        track: { margin: 0 },
         dataLabels: {
           name: {
             offsetY: 5,
@@ -42,14 +40,13 @@ const StatsCard: FC<Props> = (props) => {
           },
         },
       },
-      stroke: {
-        colors: ["green", "red"],
-        // show: false,
-      },
+
       total: {
         backgroundColor: "green",
       },
     },
+    colors: [color],
+
     labels: [percentageString],
   };
 
@@ -60,13 +57,15 @@ const StatsCard: FC<Props> = (props) => {
         <span className="icon-more-vert" />
       </HeadSection>
       <BodySection>
-        <ReactApexChart
-          options={options}
-          series={[percentage]}
-          type="radialBar"
-          height={120}
-          width={70}
-        />
+        <div style={{ minHeight: 10 }}>
+          <ReactApexChart
+            options={options}
+            series={[percentage]}
+            type="radialBar"
+            height={70}
+            width={70}
+          />
+        </div>
         <TextSection>
           <Text20>{total}</Text20>
           <Text13 color={"rgba(31, 33, 39, 0.7)"}>{title} Today</Text13>
@@ -81,6 +80,9 @@ export default StatsCard;
 const Holder = styled.div`
   ${CSS_CARD};
   padding: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const HeadSection = styled.div`
