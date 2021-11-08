@@ -75,7 +75,7 @@ const LogoImage = styled.img`
 
 const DetailSection = styled.div`
   margin-top: 7px;
-  & > :first-child {
+  & > :first-of-type {
     margin-bottom: 3px;
   }
 `;
@@ -112,7 +112,7 @@ const TeamLeadImg = styled.img`
 const TeamLeadDetail = styled.div`
   flex: 1;
   margin-left: 15px;
-  & > :first-child {
+  & > :first-of-type {
     margin-bottom: 5px;
   }
 `;

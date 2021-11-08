@@ -5,7 +5,6 @@ import { URL_DASHBOARD } from "../constants/navigations";
 export const Routes = () => {
   return (
     <Switch>
-      {/*<Redirect from="/" to={URL_DASHBOARD} />*/}
       <Route path={"/"} exact>
         <Redirect to={URL_DASHBOARD} />
       </Route>

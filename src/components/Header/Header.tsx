@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import User from "../../assets/images/avatar.png";
 
 type Props = {
+  toggleMenu: () => void;
   // title?: string;
 };
 
@@ -22,9 +23,13 @@ const title = (value: string) => {
 
 const Header: FC<Props> = (props) => {
   const location = useLocation();
+  const { toggleMenu } = props;
   return (
     <Holder>
-      <Text20>{title(location.pathname)}</Text20>
+      <TitleWrapper>
+        <span className={"icon-menu"} onClick={toggleMenu} />
+        <Text20>{title(location.pathname)}</Text20>
+      </TitleWrapper>
       <BodySection>
         <span className={"icon-search"} />
         <span className={"icon-notification"} />
@@ -43,6 +48,24 @@ const Holder = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 991.99px) {
+    padding: 15px;
+  }
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  & > :first-of-type {
+    display: none;
+  }
+  @media (max-width: 991.99px) {
+    & > :first-of-type {
+      display: block;
+      margin-right: 10px;
+    }
+  }
 `;
 
 const BodySection = styled.div`
@@ -50,6 +73,11 @@ const BodySection = styled.div`
   align-items: center;
   & > :not(:last-child) {
     margin-left: 40px;
+  }
+  @media (max-width: 991.99px) {
+    & > :not(:last-child) {
+      margin-left: 20px;
+    }
   }
 `;
 

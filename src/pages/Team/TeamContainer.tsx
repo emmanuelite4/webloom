@@ -41,6 +41,11 @@ const Holder = styled.div`
   grid-template-columns: 2fr 1fr;
   gap: 26px;
   align-items: flex-start;
+
+  @media (max-width: 991.99px) {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
 `;
 
 const ColumnOne = styled.div`
@@ -57,7 +62,7 @@ const HeadSection = styled.div`
 const FilterSection = styled.div`
   display: flex;
   align-items: center;
-  & > :nth-child(2) {
+  & > :nth-of-type(2) {
     margin-left: 10px;
   }
 `;
@@ -66,4 +71,12 @@ const TeamList = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 26px;
+
+  @media (max-width: 991.99px) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;

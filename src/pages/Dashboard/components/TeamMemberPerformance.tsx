@@ -158,7 +158,7 @@ const UserBodySection = styled.div`
 
 const UserDetailSection = styled.div`
   flex: 1;
-  & > :first-child {
+  & > :first-of-type {
     margin-bottom: 2px;
   }
 `;

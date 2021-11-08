@@ -4,14 +4,19 @@ import { Routes } from "./routes";
 import styled from "@emotion/styled";
 import { COLOR_BACKGROUND_ONE } from "./constants/styles";
 import Header from "./components/Header/Header";
+import { useState } from "react";
 
 function App() {
+  const [state, setState] = useState(false);
+  const toggleMenu = () => {
+    setState((prev) => !prev);
+  };
   return (
     <Router>
       <Holder>
-        <SideBar />
+        <SideBar smShow={state} toggleMenu={toggleMenu} />
         <BodySection>
-          <Header />
+          <Header toggleMenu={toggleMenu} />
           <Routes />
         </BodySection>
       </Holder>

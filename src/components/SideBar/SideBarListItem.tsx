@@ -8,15 +8,16 @@ type Props = {
   title: string;
   icon: string;
   path: string;
+  onClick?: () => void;
 };
 
-const SideBarListItem: FC<Props> = ({ title, icon, path }) => {
+const SideBarListItem: FC<Props> = ({ title, icon, path, onClick }) => {
   const location = useLocation();
   const active: boolean = location.pathname === path;
   const color = active ? COLOR_PRIMARY_ONE : "";
   return (
-    <Holder active={active} to={path}>
-      {active && <BorderLeft />}
+    <Holder isActive={active} to={path} onClick={onClick}>
+      {active ? <BorderLeft /> : null}
       <IconWrapper>
         <span className={`icon-${icon}`} />
       </IconWrapper>
@@ -28,7 +29,7 @@ const SideBarListItem: FC<Props> = ({ title, icon, path }) => {
 export default SideBarListItem;
 
 type ActiveProps = {
-  active: boolean;
+  isActive: boolean;
 };
 
 const Holder = styled(Link)`
@@ -39,9 +40,9 @@ const Holder = styled(Link)`
   align-items: center;
   cursor: pointer;
   background-color: ${(props: ActiveProps) =>
-    props.active ? "rgba(57, 84, 255, 0.05)" : "transparent"};
+    props.isActive ? "rgba(57, 84, 255, 0.05)" : "transparent"};
   color: ${(props: ActiveProps) =>
-    props.active ? COLOR_PRIMARY_ONE : "rgba(31, 33, 39, 0.6)"};
+    props.isActive ? COLOR_PRIMARY_ONE : "rgba(31, 33, 39, 0.6)"};
   text-decoration: none !important;
   &:hover {
     background-color: rgba(57, 84, 255, 0.05);

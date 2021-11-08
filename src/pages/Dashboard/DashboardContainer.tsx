@@ -48,6 +48,9 @@ export default DashboardContainer;
 
 const Holder = styled.div`
   padding: 35px;
+  @media (max-width: 991.99px) {
+    padding: 15px;
+  }
 `;
 
 const FirstSection = styled.div`
@@ -55,6 +58,10 @@ const FirstSection = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-bottom: 30px;
+
+  @media (max-width: 991.99px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const StatsSection = styled.div`
@@ -67,4 +74,7 @@ const SecondSection = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
+  @media (max-width: 991.99px) {
+    grid-template-columns: 1fr;
+  }
 `;
