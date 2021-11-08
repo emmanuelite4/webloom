@@ -6,6 +6,7 @@ import SideBarListItem from "./SideBarListItem";
 import Button from "../shared/Button/Button";
 import { menus } from "../../constants/side-menu";
 import { FC } from "react";
+import { keyframes } from "@emotion/react";
 
 type Props = {
   smShow: boolean;
@@ -44,6 +45,14 @@ export default SideBar;
 type HolderProps = {
   smShow: boolean;
 };
+
+const slideIn = keyframes`
+  from{
+    left: -320px
+  } to {
+    left:0
+    }
+`;
 const Holder = styled.div`
   width: 224px;
   background-color: ${COLOR_BACKGROUND_TWO};
@@ -62,6 +71,7 @@ const Holder = styled.div`
     top: 0;
     z-index: 10;
     width: 320px;
+    animation: ${slideIn} 0.5s forwards;
   }
 `;
 
