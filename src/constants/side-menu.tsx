@@ -19,12 +19,12 @@ export const menus: MenuType[] = [
   },
   {
     title: "Task",
-    path: "task",
+    path: "/task",
     icon: "task",
   },
   {
     title: "Calender",
-    path: "calender",
+    path: "/calender",
     icon: "calender",
   },
   {
@@ -34,7 +34,7 @@ export const menus: MenuType[] = [
   },
   {
     title: "Settings",
-    path: "settings",
+    path: "/settings",
     icon: "settings",
   },
 ];

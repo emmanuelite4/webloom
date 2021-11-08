@@ -119,10 +119,13 @@ const UserItemHolder = styled.div`
 `;
 
 const UserImageWrapper = styled.div`
-  width: 56px;
-  height: 56px;
-  border: 2px solid rgba(57, 84, 255, 0.04);
-  border-radius: 8px;
+  width: 58px;
+  height: 58px;
+  background-color: rgba(57, 84, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
   position: relative;
 `;
 
