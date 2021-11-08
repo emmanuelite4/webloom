@@ -29,7 +29,7 @@ export const menus: MenuType[] = [
   },
   {
     title: "Report",
-    path: "report",
+    path: "/report",
     icon: "report",
   },
   {

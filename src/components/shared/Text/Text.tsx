@@ -1,7 +1,5 @@
 import { COLOR_TEXT_PRIMARY } from "../../../constants/styles";
 import styled from "@emotion/styled";
-import { FC } from "react";
-// import { h1 } from "@emotion/styled";
 
 type Props = {
   color?: string;
