@@ -31,6 +31,14 @@ export const Text18 = styled.h5`
   font-weight: 500;
 `;
 
+export const Text16 = styled.h6`
+  font-size: 16px;
+  color: ${(props) => props.color || COLOR_TEXT_PRIMARY};
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+`;
+
 export const Text14 = styled.p`
   font-size: 14px;
   color: ${(props) => props.color || COLOR_TEXT_PRIMARY};

@@ -9,7 +9,9 @@ function App() {
     <Router>
       <Holder>
         <SideBar />
-        <Routes />
+        <BodySection>
+          <Routes />
+        </BodySection>
       </Holder>
     </Router>
   );
@@ -22,7 +24,10 @@ const Holder = styled.div`
   align-items: center;
   height: 100%;
   background-color: ${COLOR_BACKGROUND_ONE};
-  & > :nth-child(2) {
-    flex: 1;
-  }
+`;
+
+const BodySection = styled.div`
+  height: 100%;
+  flex: 1;
+  overflow: auto;
 `;

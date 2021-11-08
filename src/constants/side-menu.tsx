@@ -1,4 +1,4 @@
-import { URL_DASHBOARD } from "./navigations";
+import { URL_DASHBOARD, URL_TEAM } from "./navigations";
 
 type MenuType = {
   title: string;
@@ -14,7 +14,7 @@ export const menus: MenuType[] = [
   },
   {
     title: "My Team",
-    path: "my-team",
+    path: URL_TEAM,
     icon: "team",
   },
   {
