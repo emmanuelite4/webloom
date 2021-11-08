@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Routes } from "./routes";
 import styled from "@emotion/styled";
 import { COLOR_BACKGROUND_ONE } from "./constants/styles";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Holder>
         <SideBar />
         <BodySection>
+          <Header />
           <Routes />
         </BodySection>
       </Holder>
