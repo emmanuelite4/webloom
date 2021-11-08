@@ -61,7 +61,7 @@ const TaskActivities = () => {
         options={options}
         series={series}
         type="bar"
-        height={350}
+        height={300}
       />
     </Holder>
   );

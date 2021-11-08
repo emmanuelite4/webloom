@@ -8,6 +8,8 @@ import {
 } from "../../constants/styles";
 import styled from "@emotion/styled";
 import TaskActivities from "./components/TaskActivities";
+import TeamActivities from "./components/TeamActivities";
+import TeamMemberPerformance from "./components/TeamMemberPerformance";
 
 type StatsProps = {
   title: string;
@@ -34,6 +36,10 @@ const DashboardContainer: FC = () => {
         </StatsSection>
         <TaskActivities />
       </FirstSection>
+      <SecondSection>
+        <TeamActivities />
+        <TeamMemberPerformance />
+      </SecondSection>
     </Holder>
   );
 };
@@ -48,10 +54,17 @@ const FirstSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  margin-bottom: 30px;
 `;
 
 const StatsSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+`;
+
+const SecondSection = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
 `;
